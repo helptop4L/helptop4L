@@ -1,14 +1,13 @@
-```mermaid
 sequenceDiagram
-    participant S as Студент
-    participant E as Електронний каталог
-    participant R as Реєстраційна система
-    participant C as Курс
+    participant Student as "Студент"
+    participant Catalog as "Електронний каталог"
+    participant RegSystem as "Реєстраційна система"
+    participant Course as "Курс"
 
-    S->>E: Запит доступних місць на курсі
-    E-->>S: Відображення кількості місць
-    S->>R: Надсилання запиту на реєстрацію
-    R->>C: Перевірка наявності місць
-    C-->>R: Підтвердження наявності місця
-    R-->>S: Підтвердження реєстрації на курс
+    Student->>+Catalog: Запит на перевірку доступних місць
+    Catalog-->>-Student: Відображення кількості доступних місць
 
+    Student->>+RegSystem: Подача заявки на реєстрацію
+    RegSystem->>+Course: Перевірка доступності місць
+    Course-->>-RegSystem: Підтвердження наявності місць
+    RegSystem-->>-Student: Підтвердження реєстрації на курс
