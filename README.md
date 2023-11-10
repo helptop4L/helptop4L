@@ -1,3 +1,4 @@
+```mermaid
 sequenceDiagram
     participant Student as "Студент"
     participant Catalog as "Електронний каталог"
