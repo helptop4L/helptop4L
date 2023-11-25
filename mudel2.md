@@ -1,6 +1,6 @@
 ```mermaid
 sequenceDiagram
-    participant Student
+    participant Студент
     participant CourseCatalog
     participant Course
     participant RegistrationSystem
