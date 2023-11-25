@@ -1,4 +1,4 @@
-'''mermaid
+```mermaid
 sequenceDiagram
     participant Student
     participant CourseCatalog
@@ -11,4 +11,4 @@ sequenceDiagram
     RegistrationSystem->>Course: проверка доступности мест
     Course-->>RegistrationSystem: информация о доступности
     RegistrationSystem-->>Student: подтверждение/отказ регистрации
-'''mermaid
+```mermaid
